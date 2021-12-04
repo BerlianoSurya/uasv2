@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/drawable/cursor.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/drawable/ic_baseline_account_box_24.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/activity_register.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/activity_sidebar.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/adapter_recycler_view.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/app_bar_main.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/content_main.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/food_adapter_view.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/fragment_add_food.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/fragment_add_transaction.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/fragment_book.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/fragment_edit_profile.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/fragment_food.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/fragment_food_order.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/fragment_location.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/fragment_log_out.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/fragment_transaction_food.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/fragment_transaksi.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/fragment_transaksi_dashboard.xml" value="0.3684210526315789" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/fragment_transaksi_food.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/nav_header_main.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/recyler_adapter_menu.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/layout/user_list.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/menu/activity_main_drawer.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/TubesHotel/app/src/main/res/menu/main.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

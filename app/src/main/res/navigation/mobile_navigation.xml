@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_dashboard">
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.batararajadamanik.tubeshotel.EditProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_edit_profile" />
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:label="Logout"
+        android:name="com.batararajadamanik.tubeshotel.logOutFragment"
+        tools:layout="@layout/fragment_log_out"/>
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.batararajadamanik.tubeshotel.ui.dashboard.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_nav_dashboard_to_nav_food"
+            app:destination="@id/nav_food" />
+        <action
+            android:id="@+id/action_nav_dashboard_to_nav_book"
+            app:destination="@id/nav_book" />
+        <action
+            android:id="@+id/action_nav_dashboard_to_nav_location"
+            app:destination="@id/nav_location" />
+        <action
+            android:id="@+id/action_nav_dashboard_to_nav_transaksi_dashboard"
+            app:destination="@id/nav_dashboard_transaksi" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/nav_book"
+        android:name="com.batararajadamanik.tubeshotel.ui.fitur.BookFragment"
+        android:label="Book"
+        tools:layout="@layout/fragment_book">
+        <action
+            android:id="@+id/action_nav_book_to_nav_order"
+            app:destination="@id/nav_order" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_food"
+        android:name="com.batararajadamanik.tubeshotel.ui.fitur.menu.FoodFragment"
+        android:label="Food"
+        tools:layout="@layout/fragment_food">
+        <action
+            android:id="@+id/action_nav_food_to_nav_addFood"
+            app:destination="@id/nav_addFood" />
+        <action
+            android:id="@+id/action_nav_food_to_nav_food_transaksi"
+            app:destination="@id/nav_food_transaksi" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_addFood"
+        android:name="com.batararajadamanik.tubeshotel.ui.fitur.menu.UniTest.AddFoodFragment"
+        android:label="Add Food"
+        tools:layout="@layout/fragment_add_food"/>
+
+    <fragment
+        android:id="@+id/nav_location"
+        android:name="com.batararajadamanik.tubeshotel.ui.fitur.LocationFragment"
+        android:label="Location"
+        tools:layout="@layout/fragment_location"/>
+
+    <fragment
+        android:id="@+id/nav_dashboard_transaksi"
+        android:name="com.batararajadamanik.tubeshotel.ui.dashboard.TransaksiDashboardFragment"
+        android:label="Dashboard Transaksi"
+        tools:layout="@layout/fragment_transaksi_dashboard">
+        <action
+            android:id="@+id/action_nav_dashboard_transaksi_to_nav_transaksi"
+            app:destination="@id/nav_transaksi" />
+        <action
+            android:id="@+id/action_nav_dashboard_transaksi_to_nav_transaksi_food"
+            app:destination="@id/nav_transaksi_food" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_transaksi"
+        android:name="com.batararajadamanik.tubeshotel.ui.fitur.transaksi.TransaksiFragment"
+        android:label="Transaksi"
+        tools:layout="@layout/fragment_transaksi"/>
+
+    <fragment
+        android:id="@+id/nav_transaksi_food"
+        android:name="com.batararajadamanik.tubeshotel.ui.fitur.foodorder.TransaksiFoodFragment"
+        android:label="Transaksi Food"
+        tools:layout="@layout/fragment_transaksi_food"/>
+
+    <fragment
+        android:id="@+id/nav_food_transaksi"
+        android:name="com.batararajadamanik.tubeshotel.ui.fitur.foodorder.FoodOrderFragment"
+        android:label="Food Order"
+        tools:layout="@layout/fragment_food_order"/>
+
+    <fragment
+        android:id="@+id/nav_order"
+        android:name="com.batararajadamanik.tubeshotel.ui.fitur.transaksi.AddTransactionFragment"
+        android:label="Order"
+        tools:layout="@layout/fragment_add_transaction">
+        <action
+            android:id="@+id/action_nav_order_to_nav_dashboard"
+            app:destination="@id/nav_dashboard" />
+    </fragment>
+
+</navigation>

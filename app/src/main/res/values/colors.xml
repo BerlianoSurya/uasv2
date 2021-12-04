@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3498DB</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <!--    extra color-->
+    <color name="PrimaryText">#000000</color>
+    <color name="SecondaryText">#1a1a1a</color>
+    <color name="bg_color">#FFFFFF</color>
+    <color name="icon_color">#3498DB</color>
+
+
+    <color name="cardBackground">#FFFFFF</color>
+    <color name="admin">#FFFFFF</color>
+    <color name="backadmin">#3498DB</color>
+</resources>

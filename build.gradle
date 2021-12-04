@@ -1,0 +1,28 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven {
+            url 'https://api.mapbox.com/download/v2/releases/maven'
+            authentication {
+                basic(BasicAuthentication)
+            }
+            credentials{
+                username = 'mapbox'
+                password = "sk.eyJ1IjoiYmF0YXJhcmFqYTE5IiwiYSI6ImNrdWpwNmxydTE0bXYycG15aHhveGIwamQifQ.PzOkD96ux9j6bESz_7h6Nw"
+            }
+        }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.0.2"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
