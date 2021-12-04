@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "365712527454",
+    "project_id": "tubespbp-b69cb",
+    "storage_bucket": "tubespbp-b69cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:365712527454:android:dc2c34dbe8a82cc84f24cf",
+        "android_client_info": {
+          "package_name": "com.batararajadamanik.tubeshotel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "365712527454-uom6j4ael2j467qrmeqgmidd86o0u9n9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBCJbGlvRrioRkq97A6pV2PSA63_MaCt0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "365712527454-uom6j4ael2j467qrmeqgmidd86o0u9n9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
