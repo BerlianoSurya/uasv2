@@ -2,6 +2,8 @@ package com.batararajadamanik.tubeshotel.ui.fitur;
 
 import android.widget.ImageView;
 
+import androidx.databinding.BindingAdapter;
+
 import com.bumptech.glide.Glide;
 
 
