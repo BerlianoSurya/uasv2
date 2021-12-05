@@ -52,7 +52,7 @@
                     <TextView
                         android:layout_width="90dp"
                         android:layout_height="wrap_content"
-                        android:text="Room Type"
+                        android:text="Tipe Kamar"
                         android:textSize="14dp"
                         android:textColor="@color/PrimaryText"
                         android:textStyle="bold" />
@@ -75,7 +75,7 @@
                     <TextView
                         android:layout_width="90dp"
                         android:layout_height="wrap_content"
-                        android:text="Facilities"
+                        android:text="Fasilitas"
                         android:textColor="@color/PrimaryText"
                         android:textSize="14dp"
                         android:textStyle="bold" />
@@ -98,7 +98,7 @@
                     <TextView
                         android:layout_width="90dp"
                         android:layout_height="wrap_content"
-                        android:text="Price"
+                        android:text="Harga"
                         android:textSize="14dp"
                         android:textColor="@color/PrimaryText"
                         android:textStyle="bold" />
@@ -128,7 +128,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_width="90dp"
                     android:layout_height="40dp"
-                    app:backgroundTint="#3498DB"
+                    app:backgroundTint="#6200ED"
                     android:text="Order"/>
 
             </LinearLayout>

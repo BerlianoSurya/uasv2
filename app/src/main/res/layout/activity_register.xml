@@ -21,22 +21,16 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/registerLogo"
-                android:layout_width="70dp"
-                android:layout_height="84dp"
-                android:layout_gravity="center"
-                android:foregroundGravity="center"
-                android:src="@drawable/ic_peacoks" />
+
             <TextView
                 android:id="@+id/tvTextRegister"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:textColor="#3498DB"
+                android:textColor="#6200ED"
                 android:textStyle="bold"
-                android:text="Registration Form"
+                android:text="Registrasi"
                 android:textAlignment="center"
                 android:textSize="30sp" />
 
@@ -49,9 +43,9 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:hint="Nama"
-            app:boxStrokeColor="#3498DB"
-            android:textColorHint="#3498DB"
-            app:hintTextColor="#3498DB"
+            app:boxStrokeColor="#6200ED"
+            android:textColorHint="#6200ED"
+            app:hintTextColor="#6200ED"
             app:startIconDrawable="@drawable/ic_baseline_people_alt_24"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
@@ -71,9 +65,9 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:hint="Alamat"
-            app:boxStrokeColor="#3498DB"
-            android:textColorHint="#3498DB"
-            app:hintTextColor="#3498DB"
+            app:boxStrokeColor="#6200ED"
+            android:textColorHint="#6200ED"
+            app:hintTextColor="#6200ED"
             app:startIconDrawable="@drawable/ic_baseline_location_on_24"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
@@ -93,10 +87,10 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:hint="Email"
-            app:boxStrokeColor="#3498DB"
-            android:textColorHint="#3498DB"
+            app:boxStrokeColor="#6200ED"
+            android:textColorHint="#6200ED"
             app:startIconDrawable="@drawable/ic_baseline_email_24"
-            app:hintTextColor="#3498DB"
+            app:hintTextColor="#6200ED"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -115,10 +109,10 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:hint="+62"
-            app:boxStrokeColor="#3498DB"
-            android:textColorHint="#3498DB"
+            app:boxStrokeColor="#6200ED"
+            android:textColorHint="#6200ED"
             app:startIconDrawable="@drawable/ic_baseline_call_24"
-            app:hintTextColor="#3498DB"
+            app:hintTextColor="#6200ED"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -137,9 +131,9 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:hint="Username"
-            app:boxStrokeColor="#3498DB"
-            android:textColorHint="#3498DB"
-            app:hintTextColor="#3498DB"
+            app:boxStrokeColor="#6200ED"
+            android:textColorHint="#6200ED"
+            app:hintTextColor="#6200ED"
             app:startIconDrawable="@drawable/ic_baseline_account_circle_24"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
@@ -159,9 +153,9 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:hint="Password"
-            app:boxStrokeColor="#3498DB"
-            android:textColorHint="#3498DB"
-            app:hintTextColor="#3498DB"
+            app:boxStrokeColor="#6200ED"
+            android:textColorHint="#6200ED"
+            app:hintTextColor="#6200ED"
             app:startIconDrawable="@drawable/ic_baseline_lock_24"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
@@ -192,7 +186,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:shadowColor="#FFFFFF"
-                app:backgroundTint="#3498DB"
+                app:backgroundTint="#6200ED"
                 android:text="Register"
                 android:textSize="20sp" />
             <LinearLayout
@@ -208,7 +202,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Already a member?"
+                    android:text="Sudah Punya Akun?"
                     android:textAlignment="center" />
 
                 <Button
@@ -219,7 +213,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="-20dp"
                     android:text="Login"
-                    android:textColor="#3498DB"
+                    android:textColor="#6200ED"
                     android:textSize="10sp" />
             </LinearLayout>
 

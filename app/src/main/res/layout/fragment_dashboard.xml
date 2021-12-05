@@ -7,9 +7,6 @@
     android:layout_height="match_parent"
     android:background="@color/bg_color"
     tools:context=".ui.dashboard.DashboardFragment">
-
-
-
     <!-- TODO: Update blank fragment layout -->
     <GridLayout
         android:layout_width="match_parent"
@@ -42,7 +39,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/ic_hotel_key" />
+                    android:src="@drawable/ic_baseline_bedroom_parent_24" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -113,7 +110,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/ic_transaction" />
+                    android:src="@drawable/ic_baseline_payments_24" />
                 <TextView
                     android:layout_marginTop="8dp"
                     android:layout_width="wrap_content"

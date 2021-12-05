@@ -79,7 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textColor="@color/SecondaryText"
-            app:backgroundTint="#3498DB"
+            app:backgroundTint="#6200ED"
             android:text="order"/>
 
     </LinearLayout>

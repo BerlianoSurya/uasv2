@@ -27,11 +27,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp">
+
                 <ImageView
+                    android:id="@+id/ivMenu"
                     android:layout_width="110dp"
-                    android:layout_height="120dp"
-                    android:id="@+id/ivMenu">
-                </ImageView>
+                    android:layout_height="120dp"></ImageView>
             </LinearLayout>
 
             <LinearLayout
@@ -47,19 +47,12 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="90dp"
-                        android:layout_height="wrap_content"
-                        android:text="Food Name"
-                        android:textSize="14dp"
-                        android:textColor="@color/PrimaryText"
-                        android:textStyle="bold" />
-
-                    <TextView
                         android:id="@+id/twName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="7dp"
-                        android:textColor="@color/SecondaryText"
+                        android:textColor="@color/PrimaryText"
+                        android:textStyle="bold"
                         android:textSize="12dp" />
                 </LinearLayout>
 
@@ -69,19 +62,12 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="90dp"
-                        android:layout_height="wrap_content"
-                        android:text="Price"
-                        android:textSize="14dp"
-                        android:textColor="@color/PrimaryText"
-                        android:textStyle="bold" />
-
-                    <TextView
                         android:id="@+id/twPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="7dp"
-                        android:textColor="@color/SecondaryText"
+                        android:textColor="@color/PrimaryText"
+                        android:textStyle="bold"
                         android:text="@{String.valueOf(kmr.harga)}"
                         android:textSize="12dp" />
                 </LinearLayout>
@@ -92,19 +78,22 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="90dp"
+                        android:layout_width="20dp"
                         android:layout_height="wrap_content"
-                        android:text="Amount"
-                        android:textSize="14dp"
+                        android:text="x"
+                        android:textAlignment="viewEnd"
                         android:textColor="@color/PrimaryText"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/twAmount"
+                        android:textAlignment="viewStart"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="7dp"
-                        android:textColor="@color/SecondaryText"
+                        android:textColor="@color/PrimaryText"
+                        android:textStyle="bold"
                         android:text="@{String.valueOf(kmr.harga)}"
                         android:textSize="12dp" />
                 </LinearLayout>
@@ -123,27 +112,27 @@
 
 
                     <Button
-                        android:id="@+id/edit"
-                        android:layout_marginRight="15dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_width="90dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_height="40dp"
-                        app:backgroundTint="#3498DB"
-                        android:text="Edit"/>
-
-
-                    <Button
                         android:id="@+id/delete"
                         android:layout_width="90dp"
                         android:layout_height="40dp"
-                        android:layout_marginEnd="3dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="20dp"
+                        android:layout_marginRight="15dp"
+                        android:text="Delete"
+                        app:backgroundTint="#FF0000" />
+
+
+                    <Button
+                        android:id="@+id/edit"
+                        android:layout_width="90dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="3dp"
                         android:layout_marginRight="50dp"
 
-                        android:text="Delete"
-                        app:backgroundTint="#ff4040" />
+                        android:text="Edit"
+                        app:backgroundTint="#6200ED" />
 
 
                 </RelativeLayout>

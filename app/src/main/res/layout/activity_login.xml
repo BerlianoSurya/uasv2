@@ -23,25 +23,18 @@
 
 
             <LinearLayout
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="100dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/logo"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:foregroundGravity="center"
-                    android:src="@drawable/ic_peacoks"
-                    android:layout_gravity="center"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="30dp"
                     android:layout_gravity="center"
-                    android:text="Hotel Peacocks"
-                    android:textColor="#3498DB"
+                    android:text="Project Z"
+                    android:textColor="#6200ED"
                     android:textStyle="bold"
                     android:textAlignment="center"
                     android:textSize="30sp" />
@@ -51,14 +44,14 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/editEmailLoginLayout"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="25dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email"
                 abdroid:startIconDrawable="@drawable/ic_baseline_email_24"
-                app:boxStrokeColor="#3498DB"
-                android:textColorHint="#3498DB"
-                app:hintTextColor="#3498DB"
+                app:boxStrokeColor="#6200ED"
+                android:textColorHint="#6200ED"
+                app:hintTextColor="#6200ED"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -78,10 +71,10 @@
                 android:layout_height="wrap_content"
                 abdroid:startIconDrawable="@drawable/ic_baseline_lock_24"
                 android:hint="Password"
-                app:placeholderTextColor="#3498DB"
-                android:textColorHint="#3498DB"
-                app:boxStrokeColor="#3498DB"
-                app:hintTextColor="#3498DB"
+                app:placeholderTextColor="#6200ED"
+                android:textColorHint="#6200ED"
+                app:boxStrokeColor="#6200ED"
+                app:hintTextColor="#6200ED"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edtPasswordLogin"
@@ -106,7 +99,7 @@
                     android:layout_gravity="center"
                     android:text="Login"
                     android:textAlignment="gravity"
-                    app:backgroundTint="#3498DB"
+                    app:backgroundTint="#6200ED"
                     android:textSize="20sp" />
 
                 <LinearLayout
@@ -121,7 +114,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:textColor="@color/SecondaryText"
-                        android:text="Not a member?"
+                        android:text="Belum Punya Akun?"
                         android:textAlignment="center" />
 
                     <Button
@@ -131,7 +124,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="Register"
-                        android:textColor="#3498DB"
+                        android:textColor="#6200ED"
                         android:textSize="10sp" />
                 </LinearLayout>
             </LinearLayout>

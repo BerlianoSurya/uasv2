@@ -21,9 +21,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Menu Name"
-                app:boxStrokeColor="#3498DB"
-                android:textColorHint="#3498DB"
-                app:hintTextColor="#3498DB"
+                app:boxStrokeColor="#6200ED"
+                android:textColorHint="#6200ED"
+                app:hintTextColor="#6200ED"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -42,10 +42,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Price"
-                app:placeholderTextColor="#3498DB"
-                android:textColorHint="#3498DB"
-                app:boxStrokeColor="#3498DB"
-                app:hintTextColor="#3498DB"
+                app:placeholderTextColor="#6200ED"
+                android:textColorHint="#6200ED"
+                app:boxStrokeColor="#6200ED"
+                app:hintTextColor="#6200ED"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edtMenuPrice"
@@ -61,10 +61,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Image URL"
-                app:placeholderTextColor="#3498DB"
-                android:textColorHint="#3498DB"
-                app:boxStrokeColor="#3498DB"
-                app:hintTextColor="#3498DB"
+                app:placeholderTextColor="#6200ED"
+                android:textColorHint="#6200ED"
+                app:boxStrokeColor="#6200ED"
+                app:hintTextColor="#6200ED"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edtPhoto"
@@ -91,17 +91,16 @@
                     android:textSize="20sp" />
 
 
-
                 <Button
                     android:id="@+id/btn_edit"
-                    android:layout_marginTop="20dp"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
                     android:text="Save"
                     android:textAlignment="gravity"
-                    app:backgroundTint="#3498DB"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    app:backgroundTint="#6200ED" />
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>

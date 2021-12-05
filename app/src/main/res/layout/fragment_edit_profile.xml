@@ -33,9 +33,9 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:hint="Full Name"
-            app:boxStrokeColor="#3498DB"
-            android:textColorHint="#3498DB"
-            app:hintTextColor="#3498DB"
+            app:boxStrokeColor="#6200ED"
+            android:textColorHint="#6200ED"
+            app:hintTextColor="#6200ED"
             app:layout_constraintTop_toBottomOf="@+id/profileImageView"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
@@ -57,9 +57,9 @@
             android:layout_height="55dp"
             android:hint="Phone Number"
             android:layout_marginTop="40dp"
-            android:textColorHint="#3498DB"
-            app:boxStrokeColor="#3498DB"
-            app:hintTextColor="#3498DB"
+            android:textColorHint="#6200ED"
+            app:boxStrokeColor="#6200ED"
+            app:hintTextColor="#6200ED"
             app:layout_constraintTop_toBottomOf="@+id/edtNameLayout">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -81,9 +81,9 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:hint="Address"
-            android:textColorHint="#3498DB"
-            app:boxStrokeColor="#3498DB"
-            app:hintTextColor="#3498DB"
+            android:textColorHint="#6200ED"
+            app:boxStrokeColor="#6200ED"
+            app:hintTextColor="#6200ED"
             app:layout_constraintTop_toBottomOf="@+id/edtTelpLayout">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -108,7 +108,7 @@
             android:layout_marginTop="40dp"
             android:layout_height="wrap_content"
             android:text="Save"
-            app:backgroundTint="#3498DB"
+            app:backgroundTint="#6200ED"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edtAddressLayout" />

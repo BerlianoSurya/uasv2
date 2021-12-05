@@ -11,14 +11,17 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
@@ -33,7 +36,11 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
@@ -74,8 +81,8 @@ public class HomeActivity extends AppCompatActivity {
         final DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         View headerView = navigationView.getHeaderView(0);
-//        TextView navUsername = headerView.findViewById(R.id.username);
-//        TextView navEmail =  headerView.findViewById(R.id.email);
+        TextView navUsername = headerView.findViewById(R.id.username);
+        TextView navEmail =  headerView.findViewById(R.id.email);
         ImageView profile = headerView.findViewById(R.id.imageView);
         final ImageButton dark = findViewById(R.id.dark);
         // Passing each menu ID as a set of Ids because each
@@ -89,27 +96,24 @@ public class HomeActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+            firebaseAuth = firebaseAuth.getInstance();
+            firebaseUser = firebaseAuth.getCurrentUser();
+            firebaseAuth = FirebaseAuth.getInstance();
+            user = firebaseAuth.getCurrentUser();
+            userId = user.getUid();
+            final DocumentReference documentReference = fStore.collection("users").document(userId);
+            documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+                @Override
+                public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+                    if (documentSnapshot.exists()) {
+                        navUsername.setText(documentSnapshot.getString("email"));
+                        navEmail.setText(documentSnapshot.getString("fName"));
+                    } else {
+                        Log.d("tag", "onEvent: Document do not exists");
+                    }
+                }
+            });
 
-//        if(user!=null)
-//        {
-//            firebaseAuth = firebaseAuth.getInstance();
-//            firebaseUser = firebaseAuth.getCurrentUser();
-//            firebaseAuth = FirebaseAuth.getInstance();
-//            user = firebaseAuth.getCurrentUser();
-//            userId = user.getUid();
-////            final DocumentReference documentReference = fStore.collection("users").document(userId);
-////            documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
-////                @Override
-////                public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
-////                    if (documentSnapshot.exists()) {
-////                        navUsername.setText(documentSnapshot.getString("email"));
-////                        navEmail.setText(documentSnapshot.getString("fName"));
-////                    } else {
-////                        Log.d("tag", "onEvent: Document do not exists");
-////                    }
-////                }
-////            });
-//        }
 
         StorageReference profileRef = storageReference.child("users/" + firebaseAuth.getCurrentUser().getUid() + "/profile.jpg");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
