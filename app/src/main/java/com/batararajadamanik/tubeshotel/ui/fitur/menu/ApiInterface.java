@@ -8,39 +8,41 @@ import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface ApiInterface {
+    @Headers({"Accept: application/json"})
     @GET("menu")
     Call<MenuResponse> getAllMenu(@Query("data") String data);
 
-
-    @POST("menu/insert")
+    @Headers({"Accept: application/json"})
+    @POST("menu")
     @FormUrlEncoded
     Call<MenuResponse> createMenu(@Field("name") String nama,
                                   @Field("price") Double price,
                                   @Field("photo") String photo);
-
-    @PUT("menu/update/{id}")
+    @Headers({"Accept: application/json"})
+    @PUT("menu/{id}")
     @FormUrlEncoded
     Call<MenuResponse> updateMenu(@Path("id") String id,
                                   @Field("name") String nama,
                                   @Field("price") Double price,
                                   @Field("photo") String photo);
 
-
-    @DELETE("menu/delete/{id}")
+    @Headers({"Accept: application/json"})
+    @DELETE("menu/{id}")
     Call<MenuResponse> deleteMenu(@Path("id") String id);
 
-
+    @Headers({"Accept: application/json"})
     @GET("food")
     Call<TransaksiFoodResponse> getAllFood(@Query("data") String data);
 
-
-    @POST("food/insert")
+    @Headers({"Accept: application/json"})
+    @POST("food")
     @FormUrlEncoded
     Call<TransaksiFoodResponse> createFoodTransaksi(
             @Field("menu") String menu,
@@ -50,27 +52,28 @@ public interface ApiInterface {
             @Field("customer_name") String customer_name,
             @Field("photo") String photo);
 
-    @PUT("food/update/{id}")
+    @Headers({"Accept: application/json"})
+    @PUT("food/{id}")
     @FormUrlEncoded
     Call<TransaksiFoodResponse> updatefood(@Path("id") String id,
                                            @Field("amount") int amount);
 
-
-    @DELETE("food/delete/{id}")
+    @Headers({"Accept: application/json"})
+    @DELETE("food/{id}")
     Call<TransaksiFoodResponse> deleteFoodTransaksi(@Path("id") String id);
 
-
+    @Headers({"Accept: application/json"})
     @GET("food/{email}")
     Call<TransaksiFoodResponse> getFoodTransaksiByEmail(
             @Path("email") String email,
             @Query("data") String data);
 
-
+    @Headers({"Accept: application/json"})
     @GET("room")
     Call<TransaksiResponse> getAllBooking(@Query("data") String data);
 
-
-    @POST("room/insert")
+    @Headers({"Accept: application/json"})
+    @POST("room")
     @FormUrlEncoded
     Call<TransaksiResponse> createBooking(
             @Field("email") String email,
@@ -80,7 +83,8 @@ public interface ApiInterface {
             @Field("check_out_date") String check_out_date,
             @Field("price") Double price);
 
-    @PUT("room/update/{id}")
+    @Headers({"Accept: application/json"})
+    @PUT("room/{id}")
     @FormUrlEncoded
     Call<TransaksiResponse> updateBooking(@Path("id") String id,
                                           @Field("email") String email,
@@ -90,11 +94,11 @@ public interface ApiInterface {
                                           @Field("check_out_date") String check_out_date,
                                           @Field("price") Double price);
 
-
-    @DELETE("room/delete/{id}")
+    @Headers({"Accept: application/json"})
+    @DELETE("room/{id}")
     Call<TransaksiResponse> deleteBooking(@Path("id") String id);
 
-
+    @Headers({"Accept: application/json"})
     @GET("room/{email}")
     Call<TransaksiResponse> getBookingByEmail(
             @Path("email") String email,
