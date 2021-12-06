@@ -131,9 +131,9 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(HomeActivity.this);
-                builder.setTitle("Changing Thme")
-                        .setMessage("Changing your current theme requires the app to restart. Proceed?")
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                builder.setTitle("Ganti Tema")
+                        .setMessage("Ingin Ganti Tema?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 if (preferencesManager.getDarkModeState()) {
@@ -142,7 +142,7 @@ public class HomeActivity extends AppCompatActivity {
                                     darkMode(true);
                                 }
                             }
-                        }).setNegativeButton("No", null)
+                        }).setNegativeButton("Tidak", null)
                         .create().show();
             }
         });
@@ -164,7 +164,7 @@ public class HomeActivity extends AppCompatActivity {
     }
     private void darkMode (boolean b){
         preferencesManager.setDarkModeState(b);
-        Toast.makeText(this,"Changing theme!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"Ganti Tema", Toast.LENGTH_SHORT).show();
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
@@ -182,7 +182,7 @@ public class HomeActivity extends AppCompatActivity {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_launcher_background)
                 .setContentTitle("Berhasil Logout")
-                .setContentText("We hope to see you again")
+                .setContentText("BYE")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
         Intent notificationIntent = new Intent(this, MainActivity.class);

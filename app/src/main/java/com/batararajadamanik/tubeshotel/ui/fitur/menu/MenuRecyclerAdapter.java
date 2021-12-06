@@ -90,15 +90,15 @@ public class MenuRecyclerAdapter extends RecyclerView.Adapter<MenuRecyclerAdapte
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setTitle("Delete Menu")
-                        .setMessage("Are you sure to delete this menu?")
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                builder.setTitle("Hapus Menu")
+                        .setMessage("Apakah ingin menghapus data ini?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 String id = brg.getId();
                                 deleteMenu(id);
                             }
-                        }).setNegativeButton("No", null)
+                        }).setNegativeButton("Tidak", null)
                         .create().show();
             }
         });

@@ -64,14 +64,14 @@ public class FoodRecyclerViewAdapter extends RecyclerView.Adapter<FoodRecyclerVi
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setTitle("Delete Transaction")
-                        .setMessage("Are you sure to delete this transaction?")
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                builder.setTitle("Hapus Transaksi")
+                        .setMessage("Apakah ingin hapus data ini?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 deleteFood(transaksi.getId());
                             }
-                        }).setNegativeButton("No", null)
+                        }).setNegativeButton("Tidak", null)
                         .create().show();
             }
         });
@@ -80,9 +80,9 @@ public class FoodRecyclerViewAdapter extends RecyclerView.Adapter<FoodRecyclerVi
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setTitle("Edit Your Transaction")
-                        .setMessage("You can only change the amount of your order. Proceed?")
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                builder.setTitle("Edit")
+                        .setMessage("Hanya bisa ganti jumlah pesanan. Lanjutkan?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 final NumberPicker numberPicker = new NumberPicker(context);
@@ -93,8 +93,8 @@ public class FoodRecyclerViewAdapter extends RecyclerView.Adapter<FoodRecyclerVi
                                 final AlertDialog.Builder builder = new AlertDialog.Builder(context);
                                 builder.setView(numberPicker);
                                 builder.setTitle("Number picker");
-                                builder.setMessage("Choose a value :");
-                                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                builder.setMessage("Jumlah :");
+                                builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
@@ -102,11 +102,11 @@ public class FoodRecyclerViewAdapter extends RecyclerView.Adapter<FoodRecyclerVi
                                         updateTransaksiFood(transaksi.getId(), numberPicker.getValue());
                                     }
                                 });
-                                builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                                builder.setNegativeButton("Batal", new DialogInterface.OnClickListener() {
 
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-                                        Toast.makeText(context, "You have not selected anything", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(context, "Belum Memilih!", Toast.LENGTH_LONG).show();
                                         dialog.dismiss();
                                     }
                                 });
@@ -114,7 +114,7 @@ public class FoodRecyclerViewAdapter extends RecyclerView.Adapter<FoodRecyclerVi
 
 
                             }
-                        }).setNegativeButton("No", null)
+                        }).setNegativeButton("Tidak", null)
                         .create().show();
             }
         });
@@ -173,7 +173,7 @@ public class FoodRecyclerViewAdapter extends RecyclerView.Adapter<FoodRecyclerVi
 
             @Override
             public void onFailure(Call<TransaksiFoodResponse> call, Throwable t) {
-                Toast.makeText(context, "Update Berhasil", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Berhasil Edit", Toast.LENGTH_SHORT).show();
 
                 progressDialog.dismiss();
 
@@ -195,7 +195,7 @@ public class FoodRecyclerViewAdapter extends RecyclerView.Adapter<FoodRecyclerVi
 
             @Override
             public void onFailure(Call<TransaksiFoodResponse> call, Throwable t) {
-                Toast.makeText(context, "Delete Berhasil", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Berhasil Hapus", Toast.LENGTH_SHORT).show();
 
                 progressDialog.dismiss();
 

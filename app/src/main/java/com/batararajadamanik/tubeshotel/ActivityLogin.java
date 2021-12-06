@@ -67,9 +67,9 @@ public class ActivityLogin extends AppCompatActivity {
                 .addOnCompleteListener(new OnCompleteListener<Void>(){
                     @Override
                     public void onComplete(@NonNull Task<Void> task){
-                        String mag = "Welcome!!";
+                        String mag = "Selamat Datang";
                         if(!task.isSuccessful()){
-                            mag = "Failed";
+                            mag = "Gagal";
                         }
                         Toast.makeText(ActivityLogin.this, mag, Toast.LENGTH_SHORT).show();
                     }
@@ -90,7 +90,7 @@ public class ActivityLogin extends AppCompatActivity {
             public void onClick(View v) {
                 if(emailLogin.getText().toString().equalsIgnoreCase("admin") && passwordLogin.getText().toString().trim().equalsIgnoreCase("admin"))
                 {
-                    Toast.makeText(ActivityLogin.this, "Success", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ActivityLogin.this, "Berhasil", Toast.LENGTH_SHORT).show();
                     Fragment fragment = new FoodFragment();
                     FragmentManager fragmentManager = getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -101,25 +101,25 @@ public class ActivityLogin extends AppCompatActivity {
                 else
                 {
                     if (emailLogin.getText().toString().isEmpty() && passwordLogin.getText().toString().isEmpty()) {
-                        Toast.makeText(ActivityLogin.this, "Authentication Failed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ActivityLogin.this, "Otentikasi Gagal", Toast.LENGTH_SHORT).show();
                     } else if (emailLogin.getText().toString().isEmpty()) {
-                        Toast.makeText(ActivityLogin.this, "Email Invalid", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ActivityLogin.this, "Email Tidak Valid", Toast.LENGTH_SHORT).show();
                     } else if (passwordLogin.getText().toString().isEmpty()) {
-                        Toast.makeText(ActivityLogin.this, "Password Invalid", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ActivityLogin.this, "Password Tidak Valid", Toast.LENGTH_SHORT).show();
                     } else if (!(emailLogin.getText().toString().isEmpty() && passwordLogin.getText().toString().isEmpty())) {
                         firebaseAuth.signInWithEmailAndPassword(emailLogin.getText().toString(), passwordLogin.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     if(firebaseAuth.getCurrentUser().isEmailVerified()){
-                                        Toast.makeText(ActivityLogin.this, "Login successfully", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(ActivityLogin.this, "Berhasil Masuk", Toast.LENGTH_LONG).show();
                                         Intent intent = new Intent(ActivityLogin.this, HomeActivity.class);
                                         startActivity(intent);
                                         createNotificationChannel();
                                         addNotification();
                                         finish();
                                     }else{
-                                        Toast.makeText(ActivityLogin.this, "Please Verify Your Email !!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(ActivityLogin.this, "Cek Email!!", Toast.LENGTH_SHORT).show();
                                     }
                                 } else {
                                     Toast.makeText(ActivityLogin.this,task.getException().getMessage(), Toast.LENGTH_LONG).show();
@@ -154,8 +154,8 @@ public class ActivityLogin extends AppCompatActivity {
     private void addNotification(){
         NotificationCompat.Builder builder = new NotificationCompat.Builder( this, CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_launcher_background)
-                .setContentTitle("Login Successful")
-                .setContentText("Welcome")
+                .setContentTitle("Berhasil Masuk!")
+                .setContentText("Selamat Datang!")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
         Intent notificationIntent = new Intent( this, MainActivity.class);

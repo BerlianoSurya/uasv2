@@ -151,11 +151,11 @@ public class TransaksiFragment extends Fragment {
                 if (response.body()==null) {
                     ListTransaksi = new ArrayList<>();
                     generateDataList(ListTransaksi);
-                    Toast.makeText(getContext(),"Data Empty", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(),"Data Kosong", Toast.LENGTH_SHORT).show();
                     refreshLayout.setRefreshing(false);
                 }else{
                     generateDataList(response.body().getTransactions());
-                    Toast.makeText(getContext(),"Data Retrieved Successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(),"Berhasil Muat Data", Toast.LENGTH_SHORT).show();
                 }
 
             }

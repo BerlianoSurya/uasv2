@@ -124,7 +124,7 @@ public class EditProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (profileName.getText().toString().isEmpty() || profileAddress.getText().toString().isEmpty() || profilePhone.getText().toString().isEmpty()) {
-                    Toast.makeText(getActivity(), "One or Many fields are empty.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Lengkapi Semua Field", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -137,7 +137,7 @@ public class EditProfileFragment extends Fragment {
                 docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        Toast.makeText(getActivity(), "Profile Updated", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Berhasil Edit Profil", Toast.LENGTH_SHORT).show();
 
                     }
                 });

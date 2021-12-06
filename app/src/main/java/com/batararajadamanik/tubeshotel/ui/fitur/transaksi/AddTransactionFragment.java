@@ -250,8 +250,8 @@ public class AddTransactionFragment extends Fragment {
                                 }
 
                                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                                builder.setTitle("Thank you for your order")
-                                        .setMessage("Please check your transaction history to see detailed data of your transaction")
+                                builder.setTitle("Terima Kasih Sudah Memesan")
+                                        .setMessage("Silahkan Cek Daftar Transaksi")
                                         .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialogInterface, int i) {
@@ -266,7 +266,7 @@ public class AddTransactionFragment extends Fragment {
 
 
                     } else if (days == 0) {
-                        Toast.makeText(getActivity(), "This hotel has 1 night minimum stay", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Minimal 1 Malam", Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(getActivity(), "Check out date is invalid", Toast.LENGTH_SHORT).show();
 

@@ -74,14 +74,14 @@ public class UserRecyclerViewAdapter extends RecyclerView.Adapter<UserRecyclerVi
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setTitle("Delete Transaction")
-                        .setMessage("Are you sure to delete this transaction?")
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                builder.setTitle("Hapus Transaksi")
+                        .setMessage("Apakah ingin hapus?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 deleteBooking(transaksi.getId());
                             }
-                        }).setNegativeButton("No", null)
+                        }).setNegativeButton("Tidak", null)
                         .create().show();
             }
         });
@@ -90,9 +90,9 @@ public class UserRecyclerViewAdapter extends RecyclerView.Adapter<UserRecyclerVi
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setTitle("Edit Your Transaction")
-                        .setMessage("You can only change your check out date. Proceed?")
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                builder.setTitle("Edit Transaksi")
+                        .setMessage("Hanya bisa ganti tanggal. Lanjutkan?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 Calendar cal = Calendar.getInstance();
@@ -112,7 +112,7 @@ public class UserRecyclerViewAdapter extends RecyclerView.Adapter<UserRecyclerVi
 
 
                             }
-                        }).setNegativeButton("No", null)
+                        }).setNegativeButton("Tidak", null)
                         .create().show();
 
                 mDateListener = new DatePickerDialog.OnDateSetListener() {
@@ -149,7 +149,7 @@ public class UserRecyclerViewAdapter extends RecyclerView.Adapter<UserRecyclerVi
                                 updateTransaksi(transaksi);
 
                             } else if (days == 0) {
-                                Toast.makeText(context, "This hotel has 1 night minimum stay", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(context, "Minimal 1 malam", Toast.LENGTH_SHORT).show();
                             } else {
                                 Toast.makeText(context, "Check out date is invalid", Toast.LENGTH_SHORT).show();
 

@@ -89,19 +89,19 @@ public class RegisterActivity extends AppCompatActivity {
                 final String emPass = result.getText().toString().trim();
 
                 if (nama.getText().toString().isEmpty()) {
-                    Toast.makeText(RegisterActivity.this, "Name field must be filled", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Nama Harus Diisi!", Toast.LENGTH_SHORT).show();
                 }else if(alamat.getText().toString().isEmpty()) {
-                    Toast.makeText(RegisterActivity.this, "Address field must be filled", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Alamat Harus Diisi!", Toast.LENGTH_SHORT).show();
                 }else if (telepon.getText().toString().isEmpty()) {
-                    Toast.makeText(RegisterActivity.this, "Phone number field must be filled", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Nomor Telepon Harus Diisi!", Toast.LENGTH_SHORT).show();
                 }else if (username.getText().toString().isEmpty()){
-                    Toast.makeText(RegisterActivity.this, "Username field must be filled", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Username Telepon Harus Diisi!", Toast.LENGTH_SHORT).show();
                 }else if (email.getText().toString().isEmpty() && password.getText().toString().isEmpty()) {
-                    Toast.makeText(RegisterActivity.this, "Email or password is incorrect", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Email Harus Diisi!", Toast.LENGTH_SHORT).show();
                 } else if (email.getText().toString().isEmpty()) {
-                    Toast.makeText(RegisterActivity.this, "Email Invalid", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Email Tidak Valid!", Toast.LENGTH_SHORT).show();
                 } else if (password.getText().toString().isEmpty()) {
-                    Toast.makeText(RegisterActivity.this, "Password Invalid", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Password Tidak Valid!", Toast.LENGTH_SHORT).show();
                 } else if (!(email.getText().toString().isEmpty() && password.getText().toString().isEmpty())) {
                     firebaseAuth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
@@ -112,17 +112,17 @@ public class RegisterActivity extends AppCompatActivity {
                                 userz.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void aVoid) {
-                                        Toast.makeText(RegisterActivity.this, "Verification Email Has Been Sent", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(RegisterActivity.this, "Email Verifikasi Telah Dikirim", Toast.LENGTH_SHORT).show();
                                     }
                                 }).addOnFailureListener(new OnFailureListener() {
                                     @Override
                                     public void onFailure(@NonNull Exception e) {
-                                        Log.d(TAG, "onFailure: Email not sent!! Check Again Please!! " + e.getMessage());
+                                        Log.d(TAG, "onFailure: Email Tidak Terkirim!! Cek Lagi!! " + e.getMessage());
                                     }
                                 });
 
 
-                                Toast.makeText(RegisterActivity.this, "Registered successfully", Toast.LENGTH_LONG).show();
+                                Toast.makeText(RegisterActivity.this, "Berhasil Mendaftar", Toast.LENGTH_LONG).show();
                                 userID = firebaseAuth.getCurrentUser().getUid();
                                 DocumentReference documentReference = fStore.collection("users").document(userID);
                                 Map<String,Object> user = new HashMap<>();
